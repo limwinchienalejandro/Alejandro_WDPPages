@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,104 +8,71 @@
     body {
       font-family: Arial, sans-serif;
       margin: 0;
-      display: flex;
-      min-height: 100vh;
+      background: #f9f9f9;
+      color: #222059;
     }
-
     header {
-      background: darkgreen;
+      background: #0A5DA6;
       color: white;
-      padding: 1rem;
       text-align: center;
-      width: 100%;
+      padding: 20px;
     }
-
     nav {
-      background: antiquewhite;
-      padding: 1rem;
       display: flex;
-      gap: 1rem;
+      flex-wrap: wrap;
       justify-content: center;
+      background: #29A7D9;
+      padding: 10px;
     }
-
     nav a {
+      color: white;
       text-decoration: none;
-      color: darkgreen;
+      margin: 8px 15px;
       font-weight: bold;
     }
-
-    .sidebar {
-      background: #f4f4f4;
-      width: 200px;
-      padding: 1rem;
+    nav a:hover {
+      color: #027333;
     }
-
     main {
-      flex: 1;
-      padding: 1rem;
+      padding: 20px;
+      text-align: center;
     }
-
     footer {
-      background: darkgreen;
+      background: #0A5DA6;
       color: white;
       text-align: center;
-      padding: 0.5rem;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-    }
-
-    figcaption {
-      color: darkgreen;
-      background-color: antiquewhite;
-      display: inline;
-      padding: 0.2rem 0.5rem;
-    }
-
-    .headerhighlight {
-      display: block;
-      font-size: 1.2rem;
-      font-weight: bold;
-      color: darkgreen;
+      padding: 10px;
+      margin-top: 20px;
     }
   </style>
 </head>
-
 <body>
-  <div class="sidebar">
-    <h3>Sidebar</h3>
-    <ul>
-      <li><a href="#">Link 1</a></li>
-      <li><a href="#">Link 2</a></li>
-      <li><a href="#">Link 3</a></li>
-    </ul>
-  </div>
+  <header>
+    <h1>Alejandro WDP Pages</h1>
+    <p>Web Development Practice Showcase</p>
+  </header>
 
-  <div style="flex:1; display:flex; flex-direction:column;">
-    <header>
-      <span class="headerhighlight">Alejandro WDP Pages</span>
-    </header>
+  <!-- Navigation linking to your uploaded files -->
+  <nav>
+    <a href="CSSLayout_Alejandro.html">CSS Layout</a>
+    <a href="CSSLayoutForSemanticHTML_Alejandro.html">Semantic Layout</a>
+    <a href="CSSLayoutForSemanticsHTML2_Alejandro.html">Sections & Articles</a>
+    <a href="CSSResponsive_Alejandro.html">Responsive Design</a>
+    <a href="CSSPosition_Alejandro.html">CSS Position</a>
+    <a href="CSSFlexBoxLayout_Alejandro.html">Flexbox Layout</a>
+    <a href="CSSGridLayout_Alejandro.html">Grid Layout</a>
+    <a href="Seatwork1_CSS_Selectors_Alejandro.html">CSS Selectors</a>
+    <a href="LabAct2_Prelim__Alejandro.html">Corporate Landing Page</a>
+    <a href="HTML5_BasicStructure_Alejandro.html">HTML5 Blog Structure</a>
+  </nav>
 
-    <nav>
-      <a href="#">Home</a>
-      <a href="#">About</a>
-      <a href="#">Projects</a>
-      <a href="#">Contact</a>
-    </nav>
+  <main>
+    <h2>Welcome!</h2>
+    <p>Select a project from the navigation bar above to view my HTML/CSS practice files.</p>
+  </main>
 
-    <main>
-      <h2>Welcome!</h2>
-      <p>This is the landing page for my Web Development Practice project.</p>
-      <figure>
-        <img src="https://via.placeholder.com/400x200" alt="Sample Image">
-        <figcaption>Sample project image</figcaption>
-      </figure>
-    </main>
-
-    <footer>
-      &copy; 2026 Alejandro WDP Pages
-    </footer>
-  </div>
+  <footer>
+    &copy; 2026 Alejandro WDP Pages
+  </footer>
 </body>
-
 </html>
