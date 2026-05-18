@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>JavaScript Dialog Boxes</title>
+  <style>
+    /* Style the whole page */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #dbf1ff;
+      /* powder blue background color*/
+      margin: 0;
+      height: 100vh;
+      /* full height of the browser window */
+      display: flex;
+      /* use flexbox for centering */
+      justify-content: center;
+      /* center horizontally */
+      align-items: center;
+      /* center vertically */
+    }
+
+    /* This is the white box container */
+    .box {
+      background-color: #ffffff;
+      /* white background */
+      padding: 30px;
+      /* space inside the box */
+      border-radius: 8px;
+      /* rounded corners */
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+      /* shadow effect */
+      text-align: center;
+      /* center text inside */
+      width: 600px;
+      /* fixed width */
+    }
+
+    /* Heading style */
+    h2 {
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    /* Button style */
+    button {
+      background-color: green;
+      /* green background */
+      color: white;
+      /* white text */
+      padding: 10px 20px;
+      margin: 10px;
+      border: none;
+      /* no border */
+      cursor: pointer;
+      /* pointer cursor on hover */
+      font-size: 16px;
+      border-radius: 4px;
+      /* rounded corners */
+    }
+
+    /* Message area style */
+    #message {
+      margin-top: 20px;
+      font-size: 18px;
+      color: black;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- White box container -->
+  <div class="box">
+    <h2>JavaScript Dialog Box Demo</h2>
+
+    <!-- Buttons that call JavaScript functions -->
+    <button onclick="showAlert()">Show Alert</button>
+    <button onclick="showConfirm()">Show Confirm</button>
+    <button onclick="showPrompt()">Show Prompt</button>
+
+    <!-- This is where messages will appear -->
+    <div id="message">
+    </div>
+
+    <script>
+      // Function for alert box
+      function showAlert() {
+        alert("This is a simple alert box!"); // shows a popup with OK button
+      }
+
+      // Function for confirm box
+      function showConfirm() {
+        let result = confirm("Do you want to continue?"); // shows OK/Cancel
+        if (result) {
+          document.getElementById("message").innerText = "You clicked OK!";
+        } else {
+          document.getElementById("message").innerText = "You clicked Cancel!";
+        }
+      }
+
+      // Function for prompt box
+      function showPrompt() {
+        let name = prompt("What is your name?"); // asks for user input
+        if (name !== null && name !== "") {
+          document.getElementById("message").innerText = "Hello, " + name + "!";
+        } else {
+          document.getElementById("message").innerText = "You clicked Cancel!";
+        }
+      }
+    </script>
+</body>
+
+</html>

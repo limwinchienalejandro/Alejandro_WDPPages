@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="HTML5, HTML 5, Semantics"> <!-- Provides keywords for search engines -->
+    <title>CSS Layout With Semantic HTML</title>
+    <!-- filename: CSSLayoutForSemanticHTML_Alejandro.html -->
+    <style>
+        /* Root Variable For Colors */
+        :root {
+            --dark-blue: #222059;
+            --medium-blue: #0A5DA6;
+            --light-blue: #29A7D9;
+            --white: #FFFFFF;
+            --green: #027333;
+        }
+
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: var(--white);
+            color: var(--dark-blue);
+        }
+
+        /* Header */
+        header {
+            background: var(--medium-blue);
+            padding: 20px;
+            text-align: center;
+            color: var(--white);
+            font-size: 24px;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: center;
+            background: var(--light-blue);
+            padding: 10px;
+        }
+
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px; 
+        }
+
+        /* Responsive Navigation for HTML  */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                text-align: center;
+            }
+            nav a {
+                margin: 10px 0;
+            }
+        }
+
+        /* Main Layout */
+        .container {
+            display: grid;
+            grid-template-columns: 2fr 1fr; /* Main Content + Sidebar */
+            gap: 20px;
+            padding: 20px;
+        }
+
+        /* Responsive Grid */
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr; /* Stack items */
+            }
+        }
+
+        /* Main Content */
+        main {
+            background: var(--green);
+            color: var(--white);
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        /* Sidebar */
+        aside {
+            background: var(--dark-blue);
+            color: var(--white);
+            padding: 28px;
+            border-radius: 8px;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark-blue);
+            color: var(--white);
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>CSS Layout with Semantic HTML</h1>
+    </header>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </nav>
+    <div class="container"> 
+        <main>
+            <h2>Main Content</h2>
+            <p>This is an example of a flexible layout using CSS Grid applied to a semantic HTML structure.</p>
+        </main>
+        <aside>
+            <h2>Sidebar</h2>
+            <p>Additional content or links go here.</p>
+        </aside>
+    </div>
+    <footer>&copy; 2024 CSS Layout Example</footer>
+</body>
+</html>

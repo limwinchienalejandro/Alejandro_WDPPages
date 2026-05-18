@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="HTML5, HTML 5, Semantics"> <!-- Provides keywords for search engines -->
+    <title>CSS Layout with Sections & Articles</title>
+    <!-- CSSLayoutSemanticsHTML2_Alejandro -->
+     <style>
+        /* Root Variable For Colors */
+        :root {
+            --dark-blue: #222059;
+            --medium-blue: #0A5DA6;
+            --light-blue: #29A7D9;
+            --white: #FFFFFF;
+            --green: #027333;
+        }
+
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: var(--white);
+            color: var(--dark-blue)
+        }
+
+        /* Header */
+        header {
+            background-color: var(--medium-blue);
+            padding: 20px;
+            text-align: center;
+            color: var(--white);
+            font-size: 24px;
+        }
+
+        /* Navigation */ 
+        nav {
+            display: flex;
+            justify-content: center;
+            background: var(--light-blue);
+            padding: 10px;
+        }
+
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+
+        /* Responsive Navigation for Mobile */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                text-align: center;
+            }
+            nav a {
+                margin: 10px 0;
+            }
+        }
+
+        /* Layout Container */
+        .container {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        /* Responsive Grid */
+        @media (max-width: 76px) {
+            .container {
+                grid-template-columns: 1fr; /* Stack items */
+            }
+        }
+
+        /* Main Content Area */
+        main {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        /* Section Styling */
+        section {
+            background: var(--green);
+            color: var(--white);
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        /*  Article Styling */
+        article {
+            background: var(--dark-blue);
+            color: var(--white);
+            padding: 15px;
+            margin-top: 10px;
+            border-radius: 6px;
+        }
+
+        /* Sidebar */
+        aside {
+            background: var(--dark-blue);
+            color: var(--white);
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark-blue);
+            color: var(--white);
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+     </style>
+</head>
+<body>
+    <header>
+        <h1>CSS Layout with Sections & Articles</h1>
+    </header>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Blog</a>
+        <a href="#">Contact</a>
+    </nav>
+    <div class="container">
+        <main>
+            <section>
+                <h2>Section 1</h2>
+                <p>This section contains important content.</p>
+                <article>
+                    <h3>Article 1</h3>
+                    <p>Details about a specific topic within Section 1.</p>
+                </article>
+            </section>
+            <section>
+                <h2>Section 2</h2>
+                <p>This section is another topic.</p>
+                <article>
+                    <h3>Article 2</h3>
+                    <p>More information about a specific topic within Scetion 2.</p>
+                </article>
+            </section>
+        </main>
+        <aside>
+            <h2>Sidebar</h2>
+            <p>Additional resources, links, or advertisement go here</p>
+        </aside>
+    </div>
+    <footer>&copy;2024 CSS Layout example with section & articles</footer>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+
+<html lang = "en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name ="viewport", content="width=device-width, initial scale=1.0">
+        <title>CSS Selectors</title>
+        <!-- filename:Seatwork1_CSS_Selectors_Alejandro.html -->
+         <style>
+            /* Universal Selector */
+            * {
+                margin: 0px; 
+                padding: 20px; 
+                border-style: solid;
+            }
+
+            /* Element Selector */
+            h1{
+                color:blue;
+            }
+
+            /* Class selector */
+            .btn{
+                display: inline-block;
+                padding: 10px 20px;
+                background-color: #007bff;
+                color: white;
+                text-decoration: none;
+                border-radius: 5px;
+                font-weight: bold;
+                text-align: center;
+            }
+
+            /* ELement Selector */
+            body {
+                display: flex;
+                flex-direction: column;
+                min-height: 100vh;
+            }
+
+            /* Pseudo-class Selector */
+            a:link {
+                text-decoration: none;
+                font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            }
+
+             a:hover {
+                text-decoration: underline;
+            }
+
+            a:active {
+                color: aqua;
+            }
+            
+            a:visited {
+                font-weight: normal;
+                color: darkblue;
+                background-color: aqua;
+            }
+
+            /* Pseudo-element */
+            p::first-letter{
+                font-size: x-large;
+            }
+
+            /* ID selector */
+            #content {
+                flex: 1;
+                padding: 20px;
+            }
+
+            /* ID selector */
+            #footer{
+                background-color: #333;
+                color: white;
+                text-align: center;
+                padding: 15px;
+            }
+
+            /* Group selector */
+            ul, li {
+                font-weight: 500px;
+                list-style-type: none   ;
+            }
+
+            /* Descendant selector */
+            ol li{
+                color: darkgreen;
+            }
+         </style>
+    </head>
+
+    <body>
+        <main id="content">
+            <h1>Welcome to CSS review</h1>
+            <p class="btn">This is a simple webpage.</p>
+            <h1 class="btn">Another H1</h1>
+            <a href="#" class="btn">Register</a>
+            <ul>
+                <li>Mangoes</li>
+                <li>Pineapple</li>
+            </ul>
+
+            <ol>
+                <li>Fettucine</li>
+                <li>Spaghetti</li>
+            </ol>
+            <a href="www.gooogle.com/" class="btn" target="_blank">Log-in</a>
+            <p>
+                This is a sample Pseudo-element. This is a sample Pseudo-element.<br>
+                This is a sample Pseudo-element. This is a sample Pseudo-element.<br>
+                This is a sample Pseudo-element. This is a sample Pseudo-element.<br>
+                This is a sample Pseudo-element. This is a sample Pseudo-element.<br>   
+            </p>
+        </main>
+        <footer id="footer">
+            &copy; 2026 My Website | All Right Reserved
+        </footer>
+    </body>
+</html>

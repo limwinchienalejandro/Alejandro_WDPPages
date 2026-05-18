@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Javascript Arrays">
+    <title>Javascript One Dimensional Array</title>
+
+    <!-- filename: SW1_ArrayExample_Alejandro.html -->
+
+    <style>
+        /* Style for the page */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        /* Heading appearance */
+        h2 {
+            color: #333;
+        }
+
+        /* Input box styling */
+        input {
+            padding: 8px;
+            width: 200px;
+        }
+
+        /* Button styling */
+        button {
+            padding: 8px 12px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        /* List container */
+        ul {
+            margin-top: 15px;
+            padding: 0px;
+        }
+
+        /* Individual list items */
+        li {
+            list-style: none;
+            /* removes default bullet */
+            background-color: #f0f0f0;
+            /* light gray background */
+            margin: 5px 0px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Page title -->
+    <h2>Javascript Array Example</h2>
+
+    <!-- Input field to type items -->
+    <input type="text" id="itemInput" placeholder="Enter an item">
+
+    <!-- Buttons for actions -->
+    <button onclick="addItem()">Add Item</button>
+    <button onclick="removeItem()">Remove Item</button>
+
+    <!-- List where items will appear -->
+    <ul id="itemList"></ul>
+
+    <script>
+
+        // Create an array with initial values
+        let fruits = ["apple", "melon", "watermelon"];
+
+        // Function to display items in the array
+        function displayItems() {
+
+            // Get the list element
+            let list = document.getElementById("itemList");
+
+            // Clear current list to avoid duplicates
+            list.innerHTML = "";
+
+            // Loop through the array
+            for (let index = 0; index < fruits.length; index++) {
+
+                // Create a list item
+                let li = document.createElement("li");
+
+                // Set text content to current fruit
+                li.textContent = fruits[index];
+
+                // Add it to the list
+                list.appendChild(li);
+            }
+        }
+
+        // Function to add a new item
+        function addItem() {
+
+            // Get value from input box
+            let input = document.getElementById("itemInput").value;
+
+            // Check if input is not empty
+            if (input !== "") {
+
+                // Add value to array
+                fruits.push(input);
+
+                // Clear input box
+                document.getElementById("itemInput").value = "";
+
+                // Update display
+                displayItems();
+            }
+        }
+
+        // Function to remove the last item
+        function removeItem() {
+
+            // Remove last element from array
+            fruits.pop();
+
+            // Update display
+            displayItems();
+        }
+
+        // Show items when page loads
+        displayItems();
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="HTML5, HTML 5, Semantics">
+    <title>Dialog Boxes and Functions</title>
+    <!-- filename: SW2_Alejandro_Functions2.html -->
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #4facfe, #00f2f3);
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            background: white;
+            width: 100px auto;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        button {
+            background-color: #4facfe;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            margin: 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #00c6ff;
+        }
+
+        #output {
+            margin-top: 20px;
+            text-align: center;
+            padding: 10px;
+            border-radius: 8px;
+            background-color: #cccccc;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Registration Checker</h2>
+        <button onclick="startProgram()">Start Program</button>
+        <p id="output"></p>
+    </div>
+    <script>
+        // Welcome message
+        function showWelcome() {
+            alert("Welcome to the Registration Checker!");
+        }
+
+        // Get the user name
+        function getName() {
+            let name = prompt("Enter your name:");
+            return name;
+        }
+
+        // Get the age
+        function getAge() {
+            let age = prompt("Enter your age:");
+            return age;
+        }
+
+        // Age checker for qualification
+        function checkAge(age) {
+            if (age >= 18) {
+                return "You are qualified to register.";
+            }
+            else {
+                return "You are not yet qualified to register.";
+            }
+        }
+
+        // Main function
+        function startProgram() {
+
+            showWelcome();
+
+            let username = getName();
+            let userAge = getAge();
+
+            let confirmInfo = confirm(
+                "Confirm your details:\n\n" +
+                "Name: " + username +
+                "\n Age: " + userAge
+            );
+
+            if (confirmInfo) { // if with positive confirmation
+                let result = checkAge(userAge);
+
+                document.getElementById("output").innerHTML =
+                    "<strong>Name:</strong>" + username + "<br>" +
+                    "<strong>Age:</strong>" + userAge + "<br>" +
+                    "<strong>Result:</strong>" + result;
+
+                alert("Information submission successful!");
+            }
+            else {
+                document.getElementById("output").innerHTML =
+                    "<strong>Submission cancelled.</strong>";
+
+                alert("You cancelled the process.");
+            }
+        }
+    </script>
+</body>
+
+</html>

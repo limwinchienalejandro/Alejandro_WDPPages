@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="HTML5, HTML 5, Semantics"> <!-- Provides keywords for search engines -->
+    <title>Responsive Web Design</title>
+    <!-- filename:CSSResponsive_Alejandro.html -->
+     <style>
+        /* Root Variables for Colors */
+        :root {
+            --dark-blue: #222059; /* Dark blue shade */
+            --medium-blue: #0A5DA6; /* Medium blue shade */
+            --light-blue: #29A7D9; /* Light blue shade */
+            --white: #FFFFFF; /* White color */
+            --green: #027333; /* Green shade */
+        }
+
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif; /* Sets default font */
+            margin: 0; /* Removes default margin */
+            padding: 0; /* Removes default padding */
+            background: var(--white); /* Page background color */
+            color: var(--dark-blue); /* Default text color */
+        }
+
+        header {
+            background: var(--dark-blue); /* Header background color */
+            padding: 20px; /* Inner spacing */
+            text-align: center; /* Centers text horizontally */
+            color: var(--white); /* Header text color */
+            font-size: 24px; /* Larger font size */
+        }
+
+        nav {
+            display: flex; /* Enables Flexbox layout */
+            justify-content: center; /* Centers nav items horizontally */
+            background: var(--light-blue); /* Nav background color */
+            padding: 10px; /* Inner spacing */
+        }
+
+        nav a {
+            color: var(--white); /* Link text color */
+            text-decoration: none; /* Removes underline */
+            margin: 0 15px; /* Horizontal spacing between links */
+            font-size: 15px; /* Link font size */
+        }
+
+        /* Responsive Navigation for Mobile */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column; /* Stacks links vertically */
+                text-align: center; /* Centers text */
+            }
+            nav a {
+                margin: 10px 0; /* Vertical spacing between links */
+            }
+        }
+
+        /* Main Layout */
+        .container {
+            display: flex; /* Enables Flexbox layout */
+            flex-wrap: wrap; /* Allows items to wrap to next line */
+            justify-content: center; /* Centers items horizontally */
+            padding: 20px; /* Inner spacing */
+        }
+
+        .box {
+            background: var(--green); /* Box background color */
+            color: var(--white); /* Box text color */
+            padding: 20px; /* Inner spacing */
+            margin: 10px; /* Space around each box */
+            width: 30%; /* Box width (30% of container) */
+            text-align: center; /* Centers text inside box */
+            border-radius: 8px; /* Rounded corners */
+        }
+
+        /* Responsive Grid for Mobile */
+        @media (max-width: 768px) {
+            .box {
+                width: 100%; /* Boxes take full width on small screens */
+            }
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark-blue); /* Footer background color */
+            color: var(--white); /* Footer text color */
+            text-align: center; /* Centers footer text */
+            padding: 10px; /* Inner spacing */
+            margin-top: 20px; /* Space above footer */
+        }
+     </style>
+</head>
+<body>
+    <header>Responsive Web Design</header>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </nav>
+    <div class="container">
+        <div class="box">Feature 1</div>
+        <div class="box">Feature 2</div>
+        <div class="box">Feature 3</div>
+    </div>
+    <footer>&copy; 2024 Responsive Design Example</footer>
+</body>
+</html>

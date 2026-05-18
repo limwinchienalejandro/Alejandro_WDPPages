@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="HTML5, HTML 5, Semantics">
+    <title>JavaScript Functions</title>
+    <!--filename: SW2_Functions_Alejandro.html-->
+</head>
+
+<body>
+    <h2>JavaScript Functions</h2>
+
+    <script>
+        let globalVar = "I am global ";
+
+        //function declaration
+        function greetUser(name) {
+            return "Hello " + name + "<br>";
+        }
+
+        function add(num1, num2) {
+            return num1 + num2;
+        }
+
+        function showScope() {
+            let localVar = "I am local";
+            return globalVar + " and " + localVar;
+        }
+
+        //calling functions
+        document.write(greetUser("Ben"));
+        document.write("Sum:" + add(10, 5) + "<br>");
+        document.write(showScope());
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- filename: SW2_AlejandroMultidiArray.html -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Table Example</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 300px;
+            margin-top: 20px;
+        }
+
+        td,
+        th {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: lightblue;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Student Records</h2> <!-- Table title  -->
+    <table id="studentTable">
+        <tr>
+            <th>Name</th>
+            <th>Score</th>
+        </tr>
+    </table>
+
+    <script lang="JavaScript">
+        // Declare and intitalize the 2D Array of students.
+        let students = [
+            ["John", 90],
+            ["Denise", 85]
+        ];
+        //Get the table element
+        let tableElement = document.getElementById("studentTable");
+
+        for (indexR = 0; indexR < students.length; students++) { //Set row traversing in loop
+            let row = document.createElement("tr"); //Create tr element
+            for (indexC = 0; indexC < students[indexR].length; indexC++) {
+                let cell = document.createElement("td") //Create td element
+                cell.textContent = students[indexR][indexC]; //Assign each element from a row to a cell
+                row.appendChild(cell); //Add cell to row
+            }
+            tableElement.appendChild(row);//Add row to table 
+        }
+    </script>
+</body>
+
+</html>

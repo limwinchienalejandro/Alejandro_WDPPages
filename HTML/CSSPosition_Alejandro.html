@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="HTML5, HTML 5, Semantics"> <!-- Provides keywords for search engines -->
+    <title>CSS Position Example</title>
+    <style>
+    /* Basic Styling */
+        body {
+            font-family: Arial, sans-serif; /* Sets default font */
+            margin: 0; /* Removes default margin */
+            padding: 20px; /* Adds spacing around the page */
+        }
+
+        .container {
+            width: 90%; /* Container takes up 90% of the page width */
+            max-width: 800px; /* Maximum width is 800px */
+            margin: auto; /* Centers the container horizontally */
+        }
+
+        /* Static Position (Default) */
+        .static-box {
+            position: static; /* Default positioning (no special behavior) */
+            background: #29a7d9; /* Light blue background */
+            padding: 10px; /* Inner spacing */
+            color: white; /* Text color */
+            margin-bottom: 10px; /* Space below the box */
+        }
+
+        /* Relative Position */
+        .relative-box {
+            position: relative; /* Positioned relative to its normal location */
+            top: 20px; /* Moves down 20px */
+            left: 20px; /* Moves right 20px */
+            background: #027333; /* Green background */
+            padding: 10px; /* Inner spacing */
+            color: white; /* Text color */
+        }
+
+        /* Absolute Position */
+        .absolute-box {
+            position: absolute; /* Positioned relative to nearest ancestor with positioning */
+            top: 50px; /* Moves down 50px */
+            left: 50px; /* Moves right 50px */
+            background: #f2e527; /* Yellow background */
+            padding: 20px; /* Inner spacing */
+            color: black; /* Text color */
+        }
+
+        /* Fixed Position */
+        .fixed-box {
+            position: fixed; /* Stays fixed relative to the viewport */
+            top: 50px; /* Distance from top of viewport */
+            left: 50px; /* Distance from left of viewport */
+            background: #0a5da6; /* Medium blue background */
+            padding: 10px; /* Inner spacing */
+            color: white; /* Text color */
+            width: 150px; /* Fixed width */
+            text-align: center; /* Centers text horizontally */
+        }
+
+        /* Sticky Position */
+        .sticky-box {
+            position: sticky; /* Sticks to the top when scrolling */
+            top: 0; /* Sticks at the very top */
+            background: #222059; /* Dark blue background */
+            padding: 10px; /* Inner spacing */
+            color: white; /* Text color */
+        }
+
+        /* To demonstrate sticky effect */
+        .content {
+            height: 150vh; /* Makes content taller than viewport to allow scrolling */
+            background: #ddd; /* Light gray background */
+            padding: 20px; /* Inner spacing */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="static-box">Static Position (Default)</div>
+        <div class="relative-box">Relative Position (Moves relative to itself)</div>
+        <div class="sticky-box">Sticky Position (Stays visible when scrolling)</div>
+        <div class="content">
+            Scroll down to see the sticky header effect.
+            <div class="absolute-box">Absolute position (Moves relative to nearest positioned ancestor)</div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html> <!-- Declares this document as HTML5 -->
+<html lang="en"> <!-- Sets the language of the document to English -->
+    <head>
+        <meta charset="UTF-8"> <!-- Ensures proper character encoding -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Makes the page responsive on mobile devices -->
+        <meta name="keywords" content="HTML5, HTML 5, Semantics"> <!-- Provides keywords for search engines -->
+        <title>CSS Grid Layout</title> <!-- Title shown in browser tab -->
+        <!-- filename: CSSGridLayout_Alejandro.html -->
+
+        <style>
+            /* Defines a grid container with 3 equal columns and spacing */
+            .grid-container {
+                display: grid; /* Enables CSS Grid layout */
+                grid-template-columns: repeat(3, 1fr); /* Creates 3 equal-width columns */
+                gap: 18px; /* Adds spacing between grid items */
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Section acts as a container for articles -->
+        <section class="grid-container">
+            <!-- Each article represents independent content -->
+            <article>This is an article content 1</article>
+            <article>This is an article content 2</article>
+            <article>This is an article content 3</article>
+        </section>
+    </body>
+</html>
